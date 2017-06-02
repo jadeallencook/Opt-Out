@@ -11,3 +11,8 @@ chrome.extension.onMessage.addListener(
   	chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+
+chrome.contextMenus.create({
+  title: 'Opt-Out: %s', 
+  contexts:['selection']
+});
